@@ -32,17 +32,18 @@ public class Sudoku {
 	public static void solve() {
 		int r = -1, c = -1;
 
-		// Set r and c to the first zero in puzzle 
+		// TODO: Set r and c to the first zero in puzzle 
 		
 
 		if (r == -1 && c == -1) {
-			// solved, display the puzzle/
+			// TODO: solved, display the puzzle/
 		} else {
 			for (int num = 1; num <= 9; num++) { // 1-9 are numbers to try
-			//if( num is legal at puzzle[r][c]) {
+			//TODO:
+                        //if( num is legal at puzzle[r][c]) {
 					//place number in puzzle 
 					// call solve 
-				//}
+			//}
 			}
 			puzzle[r][c] = 0;
 		}
@@ -52,7 +53,7 @@ public class Sudoku {
 	// POST: Returns true if num can be legally placed at [row][col]
 	//       or false otherwise
 	public static boolean isLegal(int num, int row, int col) {
-		/** Determine if num is illegal at puzzle[row][col] and return false **/
+		/** TODO Determine if num is illegal at puzzle[row][col] and return false **/
 
 		
 		// Otherwise it's legal
@@ -62,7 +63,7 @@ public class Sudoku {
 	
 	// POST: Displays puzzle neatly formatted
 	public static void displayPuzzle() {
-
+           //TODO
 	}
 	
 
