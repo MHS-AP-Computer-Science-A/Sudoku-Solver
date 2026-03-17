@@ -7,45 +7,26 @@ public class Sudoku {
 	//Sudoku puzzle array
 	public static int[][] puzzle;
 
-	public static void main(String[] args) throws IOException {
-		// Initialize the array
-		puzzle = new int[9][9];
-
-		// Input all the content from the file into the array
-		Scanner file = new Scanner(new File("input.txt"));
-
-		for (int row = 0; row < puzzle.length; row++) {
-			for (int col = 0; col < puzzle[0].length; col++) {
-				puzzle[row][col] = file.nextInt();
-			}
-		}
-
-		// Call the display method
-		System.out.println("Before Solving: ");
-		displayPuzzle();
-
-		// Initial call to the solve method
-		solve();
-
-	}
 
 	public static void solve() {
 		int r = -1, c = -1;
 
-		// Set r and c to the first zero in puzzle 
-		
+		// Search puzzle for a 0. When found, set r and c
+		// to the row and column of the 0.
+		/* your code here  */
 
 		if (r == -1 && c == -1) {
-			// solved, display the puzzle
+			// no zero was found (base case), display puzzle
+            /* your code here */
 		} else {
 			//Try the numbers 1-9
-			for (int num = 1; num <= 9; num++) { // 1-9 are numbers to try
-                        //if( num is legal at puzzle[r][c]) {
+			for (int num = 1; num <= 9; num++) { 
+                //if( num is legal at puzzle[r][c]) {
 					//place number in puzzle 
 					// call solve 
-			//}
+		        //}
 			}
-			puzzle[r][c] = 0; //Sets the spot back to 0
+			puzzle[r][c] = 0; // Sets the spot back to 0 when we backtrack
 		}
 	}
 
@@ -55,9 +36,9 @@ public class Sudoku {
 	public static boolean isLegal(int num, int row, int col) {
 		/** Determine if num is illegal at puzzle[row][col] and return false **/
 		
-		//Check the row
+		// Check the row 
 		
-		//Check the column
+		// Check the column
 		
 		//Check the box (puzzle[boxRow][boxCol] is the top left corner of the current box)
 		int boxRow = row / 3 * 3; 
@@ -70,9 +51,30 @@ public class Sudoku {
 	}
 	
 	
-	// POST: Displays puzzle neatly formatted
+	// POST: Displays puzzle neatly formatted with grid lines
 	public static void displayPuzzle() {
-           //TODO
+            /* complete this method */
 	}
 
+
+
+	public static void main(String[] args) throws IOException {
+		// Initialize puzzle to an int array with 9 rows and 9 columns
+		
+
+		// Create a Scanner object to read from the file
+		
+
+		// Traverse the puzzle array and set each element to an input
+		//  from the file
+
+
+		// Call the display method
+		System.out.println("Before Solving: ");
+		displayPuzzle();
+
+		// Call the solve method
+		
+
+	}
 }
